@@ -22,4 +22,4 @@ This project consists of a web application that displays a Dota 2 Draft process 
 ## Development Process
 
 Before starting development, I created a mockup using Figma:
-![alt text]([http://url/to/img.png](https://github.com/misterrhhh/challenge/blob/main/stuff/mockup.png))
+![alt text](relative%20path/stuff/mockup.png)
