@@ -1,0 +1,27 @@
+There are two teams:
+- Radiant
+- Dire
+
+In the beginning, teams must ban and pick the heroes.
+Each team has to ban 7 heroes and pick 5 (one for each player)
+
+Each team has:
+- 20 seconds to individually ban (+ bonus time);
+- 30 seconds to individually pick (+ bonus time)
+
+- ~2:10 minutes of bonus time 
+
+At the end, each team decides which players will play which heroes. 
+The game starts when the draft is finished.
+
+
+
+
+
+
+
+
+
+
+
+

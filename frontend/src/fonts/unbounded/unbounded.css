@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Unbounded Black';
+    src: url('./Unbounded-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Unbounded Medium';
+    src: url('./Unbounded-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Unbounded Bold';
+    src: url('./Unbounded-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Unbounded Light';
+    src: url('./Unbounded-Light.ttf') format('truetype');
+}

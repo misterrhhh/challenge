@@ -1,0 +1,23 @@
+@import "./fonts/unbounded/unbounded.css";
+
+body {
+	background-color: rgb(26, 26, 26);
+	background-image: url("./assets/bg.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family: "Unbounded Regular";
+
+	user-select: none;
+}
+
+:root {
+	--color-primary: #151515;
+	--color-secondary: #151515d8;
+
+	--color-accent: #D8B68C;
+
+	--color-dire: #BD5555;
+	--color-radiant: #55BD59;
+}
