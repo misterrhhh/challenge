@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Dota 2 Challenge - Gamestate Integration Draft HUD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project consists of a web application that displays a Dota 2 Draft process making use of live data supplied by GSI.
 
-## Available Scripts
+## How to setup
 
-In the project directory, you can run:
+### Configure Dota 2 to send data
 
-### `npm start`
+##### 1. Locate the **`gamestate_integration_draft.cfg`** file in /stuff;
+##### 2. **[OPTIONAL]:** If you wish to change the location the data is sent to, modify **`gamestate_integration_draft.cfg`** (If you do this, you will need to change client and server environment variables to accomodate the changes);
+##### 3. Paste it into  **`C:/Program Files (x86)/Steam/steamapps/common/dota 2 beta/game/dota/cfg/gamestate_integration`** or your Dota 2 game location folder;
+##### 4. In Steam, Library, right click Dota 2. In General, Startup options, paste **`-gamestateintegration`**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Project setup
+##### 1. Clone this repo;
+##### 2. Run **`npm install`**;
+##### 3. **[OPTIONAL]:** If you wish to change the location where both server and client run, you can change the values inside **`.env`** and **`/frontend/.env`**;
+##### 4. Run **`npm start`**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Development Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before starting development, I created a mockup using Figma:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
