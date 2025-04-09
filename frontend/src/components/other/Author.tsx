@@ -1,4 +1,4 @@
-import "./author.scss"
+import "./other.scss"
 
 interface Props {
     name: string,

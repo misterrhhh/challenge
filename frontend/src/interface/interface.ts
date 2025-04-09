@@ -1,3 +1,5 @@
+import { Dota2 } from "dotagsi";
+
 export interface League {
     description: string;
     name: string;
@@ -15,6 +17,10 @@ export interface League {
         team_id: number;
         team_tag: string;
     }
+}
+
+export interface ExtendedDota2 extends Dota2 {
+	league: League;
 }
 
 export interface HeroPick {

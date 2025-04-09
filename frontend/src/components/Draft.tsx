@@ -1,6 +1,6 @@
 import { Draft, Map, Player } from "dotagsi";
 import "./draft.scss"
-import { League, HeroPick, HeroBan, Times } from "../../interface/interface";
+import { League, HeroPick, HeroBan, Times } from "../interface/interface";
 import { formatTime, getAmountOfMapsToWin } from "../helper/helper";
 
 import RadiantIcon from "./../assets/radiant-logo.png"
@@ -13,12 +13,11 @@ import EWC from "./../assets/esports-wc.png"
 
 interface Props {
     draft: Draft,
-    map: Map,
     league: League,
     players: Player[]
 }
 
-const DraftComponent = ({ draft, map, league, players }: Props) => {
+const DraftComponent = ({ draft, league, players }: Props) => {
 
 
 
@@ -52,7 +51,6 @@ const DraftComponent = ({ draft, map, league, players }: Props) => {
         bonus: draft.dire?.bonus_time || 0 
     }
 
-    console.log(draft)
 
     //DEFAULT: Radiant on the left || Dire on the right
     if (!picksRadiant || !bansRadiant || !picksDire || !bansDire) return null;

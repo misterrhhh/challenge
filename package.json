@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "npx tsx server/server.ts",
-    "startClient": "cd frontend && npm start"
+    "dev": "cd frontend && npm start",
+    "build": "cd frontend && npm run build"
   }
 }

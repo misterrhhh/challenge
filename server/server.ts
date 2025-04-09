@@ -5,12 +5,15 @@ import Fastify, { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify'
 import path from 'path'
 import { Server as SocketIOServer } from 'socket.io'
 import { processData } from './handlerData'
+import fastifyCors from '@fastify/cors'
 dotenv.config()
 
 const fastify: FastifyInstance = Fastify()
 const GSI = new DOTA2GSI()
 
 let io: SocketIOServer | null = null
+
+let readings = 0;
 
 const PORT = process.env.PORT || "3006"
 const HOST = process.env.HOST || 'localhost'
@@ -19,6 +22,14 @@ const FRONTEND_HOST = process.env.FRONTEND_HOST || 'localhost'
 const FRONTEND_PORT = process.env.FRONTEND_PORT || '3007'
 
 const FRONTEND_URL = `http://${FRONTEND_HOST}:${FRONTEND_PORT}` || 'http://localhost:3007'
+
+
+fastify.register(fastifyCors, {
+	origin: "*",
+	methods: ['GET', 'POST'],
+	credentials: true
+})
+
 
 fastify.register(fastifyStatic, {
     root: path.join(__dirname, '../frontend/build'), 
@@ -31,9 +42,16 @@ fastify.post('/', async (request: FastifyRequest, reply: FastifyReply) => {
 	const digested = GSI.digest(data)
 	const processed = processData(digested, data)
 
+	
+
 	if (io) {
 		io.emit('data', processed)
+		readings++
 	}
+
+	
+	console.clear()
+	console.log("Data readings: ", readings)
 
 	return { received: true }
 })
@@ -57,7 +75,7 @@ const start = async () => {
 			//do nothing
 
 			socket.on('disconnect', () => {
-				console.log('Socket disconnected:', socket.id)
+				//do nothing
 			})
 		})
 

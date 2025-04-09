@@ -1,0 +1,84 @@
+.author {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 7px 12px;
+
+    .name {
+        font-family: "Unbounded Bold";
+        color: var(--color-accent);
+        text-transform: uppercase;
+    }
+
+    .email {
+        font-family: "Unbounded Light";
+        color: white;
+        font-size: 11px;
+        opacity: .9;
+    }
+}
+
+.status {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 7px 12px;
+
+    &.green {
+        .value {
+            color: rgb(32, 187, 32);
+        }
+    }
+
+    &.red {
+        .value {
+            color: red;
+        }
+    }
+
+    .title {
+        font-family: "Unbounded Light";
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+
+    .value {
+        font-family: "Unbounded Bold";
+        text-transform: uppercase;
+    }
+}
+
+.controller {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    
+    button {
+        border: none;
+        background-color: var(--color-primary);
+        color: var(--color-accent);
+        padding: 10px;
+        font-family: "Unbounded Bold";
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-primary)
+        }
+    }
+}
