@@ -22,4 +22,4 @@ This project consists of a web application that displays a Dota 2 Draft process 
 ## Development Process
 
 Before starting development, I created a mockup using Figma:
-
+![Preview of HUDs settings](/stuff/mockup.png)
