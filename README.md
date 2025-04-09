@@ -25,4 +25,10 @@ The design was based of a Figma mockup I created before-hand:
 
 ![Dota 2 Draft Mockup](/stuff/mockup.png)
 
+Picks and Bans can be represented by 3 different states:
+
 ![Dota 2 Draft Mockup - Picks and Bans types](/stuff/types.png)
+
+The color palette used for this project is the following:
+
+![Dota 2 Draft Mockup - Color palette](/stuff/palette.png)
