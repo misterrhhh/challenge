@@ -2,7 +2,7 @@ import Fastify from 'fastify'
 import cors from '@fastify/cors'
 import { Server } from 'socket.io'
 import { DOTA2GSI } from 'dotagsi'
-
+import fastifyStatic from '@fastify/static'
 
 const fastify = Fastify()
 const GSI = new DOTA2GSI();
@@ -12,10 +12,7 @@ const GSI = new DOTA2GSI();
 let io
 
 //cors stuff
-await fastify.register(cors, {
-	origin: 'http://localhost:3000',
-	credentials: true,
-})
+
 
 
 //GSI route
@@ -31,6 +28,11 @@ fastify.post('/', async (request, reply) => {
 
 	return { received: true }
 })
+
+fastify.register(fastifyStatic, {
+	root: path.join(__dirname, '../frontend/build'), // Path to the build folder
+	prefix: '/', // Serve at the root
+  })
 
 // Endpoint qualquer
 fastify.get('/', async (req, reply) => {
