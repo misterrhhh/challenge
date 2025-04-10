@@ -13,6 +13,8 @@ const GSI = new DOTA2GSI()
 
 let io: SocketIOServer | null = null
 
+console.log(__dirname)
+
 let readings = 0;
 
 const PORT = process.env.PORT || "3006"
@@ -29,6 +31,7 @@ fastify.register(fastifyCors, {
 	methods: ['GET', 'POST'],
 	credentials: true
 })
+
 
 
 fastify.register(fastifyStatic, {
@@ -50,8 +53,8 @@ fastify.post('/', async (request: FastifyRequest, reply: FastifyReply) => {
 	}
 
 	
-	console.clear()
-	console.log("Data readings: ", readings)
+	//console.clear()
+	//console.log("Data readings: ", readings)
 
 	return { received: true }
 })
