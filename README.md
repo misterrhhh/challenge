@@ -17,7 +17,31 @@ This project consists of a web application that displays a Dota 2 Draft process 
 ##### 2. Run **`npm install`**;
 ##### 3. **[OPTIONAL]:** If you wish to change the location where both server and client run, you can change the values inside **`.env`** and **`/frontend/.env`**;
 ##### 4. Run **`npm start`**.
+##### 5. Access **`http://localhost:3006`** (by default).
 
+
+## Structure
+
+### GSI communication:
+
+```typescript
+// GSI POST route
+fastify.post('/', async (request: FastifyRequest, reply: FastifyReply) => {
+	const data = request.body as Dota2Raw 
+	const digested = GSI.digest(data)
+	const processed = processData(digested, data)
+
+	if (io) {
+		io.emit('data', processed)
+		readings++
+	}
+
+	console.clear()
+	console.log("Data readings: ", readings)
+
+	return { received: true }
+})
+```
 
 ## Development Process
 
