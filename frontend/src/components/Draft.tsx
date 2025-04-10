@@ -74,6 +74,10 @@ const DraftComponent = ({ draft, league, players }: Props) => {
                                 ))}
                             </div>
                         </div>
+                        <div className="team-time">
+                            <div className="title">Bonus time</div>
+                            <div className="value">{formatTime(timesRadiant.bonus)}</div>
+                        </div>
                     </div>
                 </div>
                 <div className={`header-info`}>
@@ -104,6 +108,10 @@ const DraftComponent = ({ draft, league, players }: Props) => {
                                     <div key={i} className={`box ${teamDire.series_wins > i ? "win" : ""} `} />
                                 ))}
                             </div>
+                        </div>
+                        <div className="team-time">
+                            <div className="title">Bonus time</div>
+                            <div className="value">{formatTime(timesDire.bonus)}</div>
                         </div>
                     </div>
                 </div>

@@ -37,6 +37,10 @@
                 .team-boxes {
                     flex-direction: row-reverse;
                 }
+
+                .team-time {
+                    left: 30px;
+                }
             }
 
             &.right {
@@ -55,6 +59,10 @@
 
                 .team-boxes {
                     flex-direction: row;
+                }
+
+                .team-time {
+                    right: 30px;
                 }
             }
 
@@ -150,6 +158,31 @@
                                 background-color: var(--color-accent);
                             }
                         }
+                    }
+                }
+
+                .team-time {
+                    position: absolute;
+                    color: var(--color-primary);
+                    background-color: var(--color-accent);
+                    box-sizing: border-box;
+                    width: 110px;
+                    height: 52px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    .title {
+                        font-family: "Unbounded Regular";
+                        text-transform: uppercase;
+                        font-size: 10px;
+                    }
+
+                    .value {
+                        font-family: "Unbounded Bold";
+                        font-size: 25px;
                     }
                 }
             }

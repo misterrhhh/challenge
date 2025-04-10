@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.44dd2843.css",
-    "main.js": "/static/js/main.292bde6c.js",
+    "main.css": "/static/css/main.0f5369ff.css",
+    "main.js": "/static/js/main.f13f59ac.js",
     "static/js/453.d855a71b.chunk.js": "/static/js/453.d855a71b.chunk.js",
     "static/media/bg.jpg": "/static/media/bg.8be1baca3ccf430dc7db.jpg",
     "static/media/npc_dota_hero_ringmaster.webm": "/static/media/npc_dota_hero_ringmaster.82cf3d2115f45656d0b8.webm",
@@ -329,12 +329,12 @@
     "static/media/spectre.webp": "/static/media/spectre.4f7f0d5452123eac4793.webp",
     "static/media/wisp.webp": "/static/media/wisp.6167ee7c091f08bb6e34.webp",
     "index.html": "/index.html",
-    "main.44dd2843.css.map": "/static/css/main.44dd2843.css.map",
-    "main.292bde6c.js.map": "/static/js/main.292bde6c.js.map",
+    "main.0f5369ff.css.map": "/static/css/main.0f5369ff.css.map",
+    "main.f13f59ac.js.map": "/static/js/main.f13f59ac.js.map",
     "453.d855a71b.chunk.js.map": "/static/js/453.d855a71b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44dd2843.css",
-    "static/js/main.292bde6c.js"
+    "static/css/main.0f5369ff.css",
+    "static/js/main.f13f59ac.js"
   ]
 }
