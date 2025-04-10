@@ -15,7 +15,7 @@ This project consists of a web application that displays a Dota 2 Draft process 
 ### Project setup
 ##### 1. Clone this repo;
 ##### 2. Run **`npm install`**;
-##### 3. Run **`cd frontend && npm install`**;
+##### 3. Run **`cd frontend && npm install && cd ..`**;
 ##### 4. **[OPTIONAL]:** If you wish to change the location where both server and client run, you can change the values inside **`.env`** and **`/frontend/.env`**;
 ##### 5. Run **`npm run build`** to create a build version of the frontend (a build is included in the repo, but it should not be used as it will not work);
 ##### 6. Run **`npm start`**.
