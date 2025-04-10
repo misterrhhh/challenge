@@ -24,6 +24,8 @@ This project consists of a web application that displays a Dota 2 Draft process 
 
 ### GSI communication:
 
+Once Dota 2 is configured to send data to our server, the server will listen for incoming data, digest it using the **`digest()`** function from **`"dotagsi"`**, which basically transforms the data into something more readable.
+
 ```typescript
 // GSI POST route
 fastify.post('/', async (request: FastifyRequest, reply: FastifyReply) => {
@@ -42,6 +44,27 @@ fastify.post('/', async (request: FastifyRequest, reply: FastifyReply) => {
 	return { received: true }
 })
 ```
+
+After that, we use **`processData`**, a custom function that adds a `league` object to the data. This step is optional and was added because the data received from GSI does not contain any information about the league the game is being played in.
+
+```typescript
+export function processData(digested: any, data: any): any {
+	const league = data?.league || {}
+
+	return {
+		...digested,
+		league: {
+			dire: league.dire ?? null,
+			radiant: league.radiant ?? null,
+			description: league.description ?? '',
+			name: league.name ?? '',
+			series_type: league.series_type ?? null,
+		},
+	}
+}
+```
+
+The data is then sent to the frontend using websockets.
 
 ## Development Process
 
